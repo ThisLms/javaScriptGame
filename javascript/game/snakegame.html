@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/snakegame/snake.css">
+    <title>Snake Game</title>
+</head>
+<body>
+    <header>
+        <div id="title-box">
+            <h1>Snake Game</h1>
+        </div>
+
+        <div id="score-box">
+            <h3>Score : <span id="score">0</span></h3>
+        </div>
+    </header>
+
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+    <div id="box">
+        <div id="restart-box">
+            <button id="btn-restart" hidden>재시작</button>
+        </div>
+        <div id="back-box">
+            <a id="btn-back" href="../index.html">← 뒤로가기</a>
+        </div>
+    </div>
+
+    <script src="../js/snakegame/snake.js"></script>
+</body>
+</html>

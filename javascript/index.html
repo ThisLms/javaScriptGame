@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lee Munsoo가 JavaScript와 Canvas로 직접 만드는 브라우저 게임 모음입니다.">
+  <meta name="theme-color" content="#0b1324">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Moon's Arcade | Game Portfolio</title>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Moon's Arcade 홈">
+        <span class="brand-icon" aria-hidden="true">✦</span>
+        <span>MOON<span class="brand-accent">/</span>ARCADE</span>
+      </a>
+      <span class="header-note"><span class="online-dot"></span> MADE WITH JAVASCRIPT</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow"><span class="eyebrow-line"></span> PERSONAL GAME LAB · 2026</p>
+          <h1 id="hero-title">작은 코드로 만드는<br><span>재미있는 세계.</span></h1>
+          <p class="hero-description">JavaScript와 Canvas로 직접 개발한 브라우저 게임을 모았습니다. 간단하게 즐기고, 새로운 게임도 기대해 주세요.</p>
+          <a class="primary-link" href="#games">게임 둘러보기 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="art-panel"><span class="art-pixel p1"></span><span class="art-pixel p2"></span><span class="art-pixel p3"></span><span class="art-pixel p4"></span><span class="art-pixel p5"></span><span class="art-pixel p6"></span><span class="art-food"></span><span class="art-sparkle">✦</span></div>
+          <span class="floating-label">01 / PLAY</span>
+        </div>
+      </section>
+
+      <section class="games-section" id="games" aria-labelledby="games-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">SELECT YOUR GAME</p><h2 id="games-title">게임 라이브러리<span class="heading-dot">.</span></h2></div>
+          <span class="game-count">01 GAME AVAILABLE</span>
+        </div>
+        <div class="game-grid">
+          <article class="game-card active-card">
+            <div class="card-visual snake-visual" aria-hidden="true">
+              <div class="grid-overlay"></div>
+              <span class="snake-block s1"></span><span class="snake-block s2"></span><span class="snake-block s3"></span><span class="snake-block s4"></span><span class="snake-block s5"></span><span class="snake-food"></span>
+              <span class="visual-corner">01</span>
+            </div>
+            <div class="card-body">
+              <div class="card-topline"><span class="tag">ARCADE · CLASSIC</span><span class="status available">● PLAYABLE</span></div>
+              <h3>Snake Game</h3>
+              <p>먹이를 먹고 점수를 올려 보세요. 벽과 자신의 몸을 피하며 최대한 오래 살아남는 클래식 게임!</p>
+              <a class="play-link" href="./game/snakegame.html">게임 시작하기 <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="game-card coming-card" aria-label="다음 게임 준비 중">
+            <div class="card-visual next-visual" aria-hidden="true"><span class="next-icon">+</span><span class="visual-corner">02</span></div>
+            <div class="card-body">
+              <div class="card-topline"><span class="tag">NEXT PROJECT</span><span class="status pending">COMING SOON</span></div>
+              <h3>Next Game</h3>
+              <p>새로운 게임을 준비하고 있어요. 하나씩 직접 만들어 이 공간을 채워 나갈 예정입니다.</p>
+              <span class="disabled-link">개발 예정 <span aria-hidden="true">↗</span></span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><p>© 2026 Lee Munsoo. All rights reserved.</p><p>DESIGNED & BUILT WITH <span aria-label="love">♥</span> AND JAVASCRIPT</p></footer>
+  </div>
+</body>
+</html>
