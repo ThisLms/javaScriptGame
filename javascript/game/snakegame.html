@@ -1,33 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/snakegame/snake.css">
-    <title>Snake Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1324">
+  <title>Snake Game | Moon's Arcade</title>
+  <link rel="stylesheet" href="../css/snakegame/snake.css">
 </head>
 <body>
-    <header>
-        <div id="title-box">
-            <h1>Snake Game</h1>
-        </div>
+  <div class="page-shell">
+    <nav class="top-nav" aria-label="메인 메뉴">
+      <a class="brand" href="../index.html"><span class="brand-icon">◈</span> MOON'S <span>ARCADE</span></a>
+      <a class="nav-link" href="../index.html">← 전체 게임</a>
+    </nav>
 
-        <div id="score-box">
-            <h3>Score : <span id="score">0</span></h3>
+    <main class="game-layout">
+      <header class="game-header">
+        <div class="game-heading" id="title-box">
+          <p class="eyebrow"><span class="live-dot"></span> MINI GAME / 01</p>
+          <h1>SNAKE <span>GAME</span></h1>
+          <p class="subtitle">방향키로 뱀을 움직여 먹이를 먹고, 벽과 자신의 몸에 부딪히지 않도록 조심하세요.</p>
         </div>
-    </header>
-
-    <canvas id="gameCanvas" width="600" height="400"></canvas>
-
-    <div id="box">
-        <div id="restart-box">
-            <button id="btn-restart" hidden>재시작</button>
+        <div id="score-box" class="score-chip" aria-label="현재 점수">
+          <h3>SCORE</h3>
+          <span id="score" aria-live="polite">0</span>
         </div>
-        <div id="back-box">
-            <a id="btn-back" href="../../index.html">← 뒤로가기</a>
-        </div>
-    </div>
+      </header>
 
-    <script src="../js/snakegame/snake.js"></script>
+      <section class="game-panel" aria-label="스네이크 게임 화면">
+        <div class="panel-top"><span><span class="panel-indicator"></span> SNAKE ZONE</span><span class="panel-caption">CANVAS 2D</span></div>
+        <div class="canvas-wrap">
+          <canvas id="gameCanvas" width="600" height="400" aria-label="방향키로 조작하는 스네이크 게임"></canvas>
+        </div>
+        <div class="panel-bottom"><span>● ARCADE MODE</span><span>COLLECT · GROW · SURVIVE</span></div>
+      </section>
+
+      <section class="bottom-grid" aria-label="게임 정보">
+        <div class="info-card">
+          <div class="card-heading"><span class="card-icon">⌨</span><h2>HOW TO PLAY</h2></div>
+          <p>방향키로 뱀을 조종하세요. 진행 방향의 반대로는 즉시 움직일 수 없습니다.</p>
+          <div class="controls"><span>↑</span><span>←</span><span>↓</span><span>→</span><small>MOVE</small></div>
+        </div>
+        <div class="info-card">
+          <div class="card-heading"><span class="card-icon">✦</span><h2>ABOUT THIS GAME</h2></div>
+          <p>먹이를 먹을수록 뱀의 몸이 길어집니다. 벽과 자신의 몸을 피하며 높은 점수에 도전하세요.</p>
+          <div class="tags"><span>JavaScript</span><span>Canvas 2D</span><span>Arcade</span></div>
+        </div>
+      </section>
+
+      <div id="box" class="action-row">
+        <div id="restart-box"><button id="btn-restart" type="button" hidden>↻ 재시작</button></div>
+        <div id="back-box"><a id="btn-back" href="../../index.html">← BACK TO ARCADE</a></div>
+      </div>
+
+    </main>
+    <footer class="site-footer">© 2026 Lee Munsoo. All rights reserved.</footer>
+  </div>
+  <script src="../js/snakegame/snake.js"></script>
 </body>
 </html>

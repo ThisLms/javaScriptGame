@@ -619,3 +619,25 @@ a {
         transition: none !important
     }
 }
+/* Fish Escape card illustration */
+.fish-visual {
+    background: linear-gradient(180deg, #2879a6 0%, #2879a6 24%, #105779 24%, #092c4a 100%);
+}
+.fish-visual::after {
+    content: '';
+    position: absolute;
+    inset: 24% 0 0;
+    background: repeating-linear-gradient(0deg, transparent 0 27px, #ffffff07 28px),
+                repeating-linear-gradient(90deg, transparent 0 27px, #ffffff07 28px);
+    pointer-events: none;
+}
+.fish-shape { position:absolute; width: 46px; height: 25px; border-radius: 50%; z-index:1; }
+.fish-shape::before { content:''; position:absolute; left:-14px; top:5px; border-top:8px solid transparent; border-bottom:8px solid transparent; border-right:17px solid currentColor; }
+.fish-shape::after { content:''; position:absolute; right:9px; top:7px; width:5px; height:5px; background:#fff; border-radius:50%; }
+.fish-yellow { left:23%; top:52%; color:#f5d85a; background:currentColor; transform:scale(.85); }
+.fish-black { left:65%; top:40%; color:#263b54; background:currentColor; transform:scale(1.3); }
+.fish-small { left:73%; top:73%; color:#f5d85a; background:currentColor; transform:scale(.65); }
+.fish-player { position:absolute; left:45%; top:64%; width:24px; height:24px; background:#ff6c72; border-radius:5px; box-shadow:0 0 22px #ff6c7260; z-index:2; }
+.fish-bubble { position:absolute; border:2px solid #9ad9e6a8; border-radius:50%; width:12px; height:12px; }
+.fish-bubble.b1 { left:14%; top:39%; } .fish-bubble.b2 { left:81%; top:54%; width:8px; height:8px; }
+.fish-visual .visual-corner { z-index:3; }
