@@ -15,6 +15,7 @@
       <span class="header-note"><span class="online-dot"></span> JAVASCRIPT GAME LAB</span>
     </header>
     <main>
+      <!-- TOP -->
       <section class="hero" aria-labelledby="hero-title">
         <div>
           <p class="eyebrow"><span class="eyebrow-line"></span> WELCOME TO MY GAME LAB</p>
@@ -32,12 +33,16 @@
           <div class="floating-label">PLAY · LEARN · BUILD</div>
         </div>
       </section>
+
+      <!-- Game -->
       <section class="games-section" id="games" aria-labelledby="games-title">
         <div class="section-heading">
           <div><p class="eyebrow">THE COLLECTION</p><h2 id="games-title">게임 목록<span class="heading-dot">.</span></h2></div>
           <span class="game-count">02 GAMES AVAILABLE</span>
         </div>
+
         <div class="game-grid">
+          <!-- 1 -->
           <article class="game-card active-card">
             <div class="card-visual snake-visual" aria-hidden="true">
               <div class="grid-overlay"></div>
@@ -52,17 +57,46 @@
               <a class="play-link" href="./javascript/game/snakegame.html">게임 플레이 <span aria-hidden="true">↗</span></a>
             </div>
           </article>
+
+          <!-- 2 -->
           <article class="game-card active-card">
             <div class="card-visual fish-visual" aria-hidden="true">
               <div class="fish-shape fish-yellow"></div><div class="fish-shape fish-black"></div><div class="fish-shape fish-small"></div>
               <div class="fish-player"></div><div class="fish-bubble b1"></div><div class="fish-bubble b2"></div>
-              <span class="visual-corner">02 / SIMULATION</span>
+              <span class="visual-corner">02 / ARCADE</span>
             </div>
             <div class="card-body">
-              <div class="card-topline"><span class="tag">CANVAS · SIMULATION</span><span class="status available">● PLAYABLE</span></div>
+              <div class="card-topline"><span class="tag">CANVAS · ARCADE</span><span class="status available">● PLAYABLE</span></div>
               <h3>Fish Raising</h3>
               <p>물속에서 플레이어를 움직여 보세요. 가까이 다가가면 물고기들이 반대 방향으로 도망갑니다.</p>
-              <a class="play-link" href="#">게임을 개발하는 중입니다. <span aria-hidden="true">↗</span></a>
+              <a class="play-link" href="./javascript/game/raisingfishgame.html">게임 플레이 <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 03 / 개발 중인 게임 -->
+          <article class="game-card development-card">
+            <div class="card-visual next-visual" aria-hidden="true">
+              <div class="next-icon">+</div>
+              <span class="visual-corner">03 / COMING SOON</span>
+            </div>
+
+            <div class="card-body">
+              <div class="card-topline">
+                <span class="tag">NEXT PROJECT</span>
+                <span class="status pending">● IN DEVELOPMENT</span>
+              </div>
+
+              <h3>Coming Soon</h3>
+
+              <p>
+                새로운 JavaScript 미니 게임을 준비하고 있습니다.
+                다음 게임도 기대해 주세요!
+              </p>
+
+              <div class="disabled-link">
+                <span>현재 개발 중입니다</span>
+                <span aria-hidden="true">⌛</span>
+              </div>
             </div>
           </article>
         </div>

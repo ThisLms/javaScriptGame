@@ -23,7 +23,10 @@
               자신보다 작은 물고기를 잡아먹으며 성장하세요! 더 큰 물고기를 조심하며 바다에서 살아남으세요.
           </p>
         </div>
-        <div class="status-chip"><span class="status-dot"></span> NOW PLAYING</div>
+        <div id="score-box" class="score-chip" aria-label="현재 점수">
+          <h3>SCORE</h3>
+          <span id="score" aria-live="polite">0</span>
+        </div>
       </header>
 
       <section class="game-panel" aria-label="물고기 게임 화면">
@@ -45,11 +48,13 @@
           <div class="tags"><span>JavaScript</span><span>Canvas 2D</span><span>Simulation</span></div>
         </div>
       </section>
-      <a class="back-button" href="../../index.html">← BACK TO ARCADE</a>
+      <div id="box" class="action-row">
+        <div id="restart-box"><button id="btn-restart" type="button" hidden>↻ 재시작</button></div>
+        <div id="back-box"><a class="back-button" href="../../index.html">← BACK TO ARCADE</a></div>
+      </div>
     </main>
     <footer>© 2026 Lee Munsoo. All rights reserved.</footer>
   </div>
-  <!-- 실제 JavaScript 파일 경로에 맞춰 수정하세요. -->
   <script src="../js/raisingfishgame/raisingfish.js"></script>
 </body>
 </html>
