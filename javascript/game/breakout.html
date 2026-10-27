@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1324">
+  <title>Breakout | Moon's Arcade</title>
+  <link rel="stylesheet" href="../css/breakoutgame/breakout.css">
+</head>
+<body>
+  <div class="page-shell">
+    <nav class="top-nav" aria-label="메인 메뉴">
+      <a class="brand" href="../../index.html"><span class="brand-icon">◈</span> MOON'S <span>ARCADE</span></a>
+      <a class="nav-link" href="../../index.html">← 전체 게임</a>
+    </nav>
+
+    <main class="game-layout">
+      <header class="game-header">
+        <div class="game-heading">
+          <p class="eyebrow"><span class="live-dot"></span> MINI GAME / 03</p>
+          <h1>BRICK <span>BREAKOUT</span></h1>
+          <p class="subtitle">패들을 움직여 공을 튕기고 벽돌을 깨 보세요. 공을 놓치지 않도록 조심하세요!</p>
+        </div>
+        <div class="game-stats" aria-label="게임 정보">
+          <div class="stat-chip"><span class="stat-label">SCORE</span><strong id="score" aria-live="polite">0</strong></div>
+          <div class="stat-chip"><span class="stat-label">LIVES</span><strong id="lives" aria-live="polite"></strong></div>
+          <div class="stat-chip"><span class="stat-label">STAGE</span><strong id="stage" aria-live="polite"></strong></div>
+        </div>
+      </header>
+
+      <section class="game-panel" aria-label="벽돌 깨기 게임 화면">
+        <div class="panel-top">
+          <span><span class="panel-indicator"></span> BREAKOUT ZONE</span>
+          <span class="panel-caption">CANVAS 2D · 800 × 600</span>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="gameCanvas" width="800" height="600" aria-label="왼쪽과 오른쪽 방향키로 패들을 이동하고 스페이스바로 공을 발사하는 게임">Canvas를 지원하는 브라우저가 필요합니다.</canvas>
+        </div>
+        <div class="panel-bottom">
+          <span id="game-status" role="status">READY TO LAUNCH</span>
+          <span>SPACE TO START</span>
+        </div>
+      </section>
+
+      <section class="bottom-grid" aria-label="게임 설명">
+        <div class="info-card">
+          <div class="card-heading"><span class="card-icon">⌨</span><h2>HOW TO PLAY</h2></div>
+          <p>← → 방향키로 패들을 움직이고, 스페이스바로 공을 발사하세요.</p>
+          <div class="controls"><span>←</span><span>→</span><small>MOVE</small><span class="key-space">SPACE</span><small>LAUNCH</small></div>
+        </div>
+        <div class="info-card">
+          <div class="card-heading"><span class="card-icon">✦</span><h2>ABOUT THIS GAME</h2></div>
+          <p>공을 패들로 튕겨 벽돌을 부수는 클래식 아케이드 게임입니다. 패들에 닿는 위치에 따라 반사 방향을 조절하는 기능을 개발 중입니다.</p>
+          <div class="tags"><span>JavaScript</span><span>Canvas 2D</span><span>Arcade</span></div>
+        </div>
+      </section>
+
+      <div class="action-row">
+        <button id="btn-restart" type="button" hidden>↻ 재시작</button>
+        <a class="back-button" href="../../index.html">← BACK TO ARCADE</a>
+      </div>
+    </main>
+    <footer>© 2026 Lee Munsoo. All rights reserved.</footer>
+  </div>
+  <script src="../js/breakoutgame/breakout.js"></script>
+</body>
+</html>

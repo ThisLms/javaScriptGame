@@ -619,25 +619,223 @@ a {
         transition: none !important
     }
 }
+
 /* Fish Escape card illustration */
 .fish-visual {
     background: linear-gradient(180deg, #2879a6 0%, #2879a6 24%, #105779 24%, #092c4a 100%);
 }
+
 .fish-visual::after {
     content: '';
     position: absolute;
     inset: 24% 0 0;
     background: repeating-linear-gradient(0deg, transparent 0 27px, #ffffff07 28px),
-                repeating-linear-gradient(90deg, transparent 0 27px, #ffffff07 28px);
+        repeating-linear-gradient(90deg, transparent 0 27px, #ffffff07 28px);
     pointer-events: none;
 }
-.fish-shape { position:absolute; width: 46px; height: 25px; border-radius: 50%; z-index:1; }
-.fish-shape::before { content:''; position:absolute; left:-14px; top:5px; border-top:8px solid transparent; border-bottom:8px solid transparent; border-right:17px solid currentColor; }
-.fish-shape::after { content:''; position:absolute; right:9px; top:7px; width:5px; height:5px; background:#fff; border-radius:50%; }
-.fish-yellow { left:23%; top:52%; color:#f5d85a; background:currentColor; transform:scale(.85); }
-.fish-black { left:65%; top:40%; color:#263b54; background:currentColor; transform:scale(1.3); }
-.fish-small { left:73%; top:73%; color:#f5d85a; background:currentColor; transform:scale(.65); }
-.fish-player { position:absolute; left:45%; top:64%; width:24px; height:24px; background:#ff6c72; border-radius:5px; box-shadow:0 0 22px #ff6c7260; z-index:2; }
-.fish-bubble { position:absolute; border:2px solid #9ad9e6a8; border-radius:50%; width:12px; height:12px; }
-.fish-bubble.b1 { left:14%; top:39%; } .fish-bubble.b2 { left:81%; top:54%; width:8px; height:8px; }
-.fish-visual .visual-corner { z-index:3; }
+
+.fish-shape {
+    position: absolute;
+    width: 46px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.fish-shape::before {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 5px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 17px solid currentColor;
+}
+
+.fish-shape::after {
+    content: '';
+    position: absolute;
+    right: 9px;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.fish-yellow {
+    left: 23%;
+    top: 52%;
+    color: #f5d85a;
+    background: currentColor;
+    transform: scale(.85);
+}
+
+.fish-black {
+    left: 65%;
+    top: 40%;
+    color: #263b54;
+    background: currentColor;
+    transform: scale(1.3);
+}
+
+.fish-small {
+    left: 73%;
+    top: 73%;
+    color: #f5d85a;
+    background: currentColor;
+    transform: scale(.65);
+}
+
+.fish-player {
+    position: absolute;
+    left: 45%;
+    top: 64%;
+    width: 24px;
+    height: 24px;
+    background: #ff6c72;
+    border-radius: 5px;
+    box-shadow: 0 0 22px #ff6c7260;
+    z-index: 2;
+}
+
+.fish-bubble {
+    position: absolute;
+    border: 2px solid #9ad9e6a8;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+.fish-bubble.b1 {
+    left: 14%;
+    top: 39%;
+}
+
+.fish-bubble.b2 {
+    left: 81%;
+    top: 54%;
+    width: 8px;
+    height: 8px;
+}
+
+.fish-visual .visual-corner {
+    z-index: 3;
+}
+
+
+/* ========================================
+   03 / Breakout Card Illustration
+======================================== */
+
+.breakout-visual {
+    background: linear-gradient(
+        145deg,
+        #203b52 0%,
+        #142b43 55%,
+        #0d2035 100%
+    );
+}
+
+/* 배경 격자 */
+.breakout-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(#ffffff08 1px, transparent 1px),
+        linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+}
+
+/* 벽돌 배치 */
+.breakout-bricks {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64%;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 7px;
+}
+
+/* 벽돌 공통 스타일 */
+.breakout-bricks span {
+    height: 17px;
+    border-radius: 4px;
+    background: #71d8db;
+    box-shadow: inset 0 -3px 0 #00000024;
+}
+
+/* 첫 번째 줄 */
+.breakout-bricks span:nth-child(-n+5) {
+    background: #a3f76b;
+}
+
+/* 두 번째 줄 */
+.breakout-bricks span:nth-child(n+6):nth-child(-n+10) {
+    background: #71d8db;
+}
+
+/* 세 번째 줄 */
+.breakout-bricks span:nth-child(n+11) {
+    background: #f3c778;
+}
+
+/* 공 */
+.breakout-ball {
+    position: absolute;
+    left: 57%;
+    top: 66%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #f5f9ff;
+    box-shadow:
+        0 0 12px #ffffff90,
+        0 0 24px #71d8db50;
+    transform: translate(-50%, -50%);
+}
+
+/* 패들 */
+.breakout-paddle {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    width: 105px;
+    height: 13px;
+    border-radius: 7px;
+    background: #a3f76b;
+    box-shadow:
+        inset 0 -3px 0 #559d52,
+        0 0 18px #a3f76b30;
+}
+
+/* 카드 번호가 일러스트 위에 표시되도록 설정 */
+.breakout-visual .visual-corner {
+    z-index: 2;
+}
+
+/* 작은 화면 대응 */
+@media (max-width: 540px) {
+    .breakout-bricks {
+        width: 70%;
+        gap: 5px;
+    }
+
+    .breakout-bricks span {
+        height: 14px;
+    }
+
+    .breakout-paddle {
+        width: 90px;
+        height: 11px;
+    }
+
+    .breakout-ball {
+        width: 12px;
+        height: 12px;
+    }
+}
